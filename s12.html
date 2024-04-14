@@ -1,0 +1,61 @@
+<!-- motivatioanl quotes website where in front page has navigation bar which contains sections like about us ,motive of creating website ,feedback form , contact details etc and   -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivational Website</title>
+  <link rel="stylesheet" href="front.css">
+  <style>
+    .container {
+      text-align: center;
+    }
+
+    .subscribe button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .subscribe button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="logo.png" alt="Motivational Website Logo">
+      <h1>Welcome to Our Motivational Website</h1>
+    </header>
+    <main>
+      <section class="quote">
+        <h2>Daily Inspiration</h2>
+        <blockquote>
+          "Success is not final, failure is not fatal: It is the courage to continue that counts."
+          <footer>- Winston Churchill</footer>
+        </blockquote>
+      </section>
+      <section class="subscribe">
+        <h2>Subscribe for Daily Motivation</h2>
+        <form id="subscriptionForm">
+          <input type="email" id="email" name="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <p>Alternatively, <button onclick="window.location.href='index/form.html'" class="form-btn">Click Here</button> to fill out a more detailed form.</p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Motivational Website. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

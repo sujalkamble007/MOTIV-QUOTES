@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivational Quotes Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 400px;
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Register for More Motivational Quotes</h2>
+    <form id="quoteForm" action="process_form.php" method="post" onsubmit="return validateQuoteForm()">
+
+    <form id="quoteForm" action="#" method="post" onsubmit="return validateQuoteForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="quote">Favorite Motivational Quote:</label>
+      <textarea id="quote" name="quote" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function validateQuoteForm() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var quote = document.getElementById('quote').value;
+
+      if (name.trim() === "") {
+        alert("Please enter your name.");
+        return false;
+      }
+
+      if (email.trim() === "") {
+        alert("Please enter your email address.");
+        return false;
+      }
+
+      if (quote.trim() === "") {
+        alert("Please enter your favorite motivational quote.");
+        return false;
+      }
+
+      var emailRegex = /^\S+@\S+\.\S+$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+
+      return true; // Form is valid, proceed with submission
+    }
+  </script>
+</body>
+</html>
